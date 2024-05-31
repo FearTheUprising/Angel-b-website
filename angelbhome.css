@@ -1,0 +1,50 @@
+body {
+    background-color:ghostwhite;
+}
+
+#wigpictures {
+    position: relative;
+    text-align: center;
+
+}
+
+#wigpictures img {
+    max-width: 500px;
+    width: 200%;
+    height: auto;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+
+
+h3 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+
+footer {
+    text-align: center;
+    color: red;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#logoforbusiness {
+    width: 20%;
+}
+
+#homebuttons {
+    text-align: center;
+    margin-top: 20px 0;
+    max-width: 50%;
+}
+
+#homebuttons button {
+    margin: 20px;
+    padding: 5px 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    width: auto;
+}
