@@ -1,36 +1,122 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-wdith, initial-scale=1.0">
-        <title>Angel Blessed | Home</title>
-        <link rel="stylesheet" type="text/css" href="angelbhome.css">
-        <meta name="description" content="My name is Angel Blessed and I design and sell hair. I sell different kinds of styles to different people with different perferences.">
-        <script src="angel.js"></script>
-    </head>
-    <body>
-        <div id="homebuttons">
-            <button onclick="shop()">My Shop</button>
-            <button onclick="aboutMe()">About Me</button>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Filter | Home</title>
+    <link rel="stylesheet" type="text/css" href="./assests/css/angelbhome.css">
+    <meta name="description" content="My name is Angel Blessed and I design and sell hair. I sell different kinds of styles to different people with different peferences. I made this website to get myself out there. I have a lot of different hair styles that I think everyone will love. So, come check out my website, and look around; you may find something that you like."/>
+    <script src="./assests/js/angel.js"></script>
+    <style>
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #f4f4f4;
+            padding: 20px;
+            box-shadow: 2px 0 5px rgba(0,0,0.1);
+            height: 100vh;
+            position: fixed;
+            transition: width 0.3s, padding 0.3s;
+            overflow: hidden;
+        }
+
+        .sidebar.collapsed {
+            width: 0;
+            padding: 0;
+        }
+        
+        .sidebar h2 {
+            margin-top: 0;
+        }
+
+        .sidebar a {
+            display: block;
+            color: #000;
+            padding: 10px;
+            text-decoration: none;
+        }
+
+        .sidebar a:hover {
+            background-color: #ddd;
+        }
+        .content {
+            margin-left: 250px;
+            padding: 20px;
+            width: 100%;
+            transition: margin-left 0.3s;
+        }
+
+        .sidebar.collapsed + .content {
+            margin-left: 0;
+        }
+
+        .toggle-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            font-size: 15px;
+            cursor: pointer;
+            z-index: 1000;
+            background-color: #f4f4f4;
+            border: none;
+            padding: 10px;
+            box-shadow: 2px 2px 5px rgba(0,0,0.1);
+        }
+
+        .toggle-btn.collapsed {
+            left: 20px;
+        }
+
+        #menu {
+            margin-left: 17%;
+        }
+    </style>
+</head>
+<body>
+    <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+    <div id="sidebar" class="sidebar">
+        <!-- Remember to add the rest of the buttons, when sufficient enough.-->
+        <div id="menu">
+            <h2>Our Menu</h2>
+            <a href="./angelbshop.html"><strong>Our Shop</strong></a>
+            <a href="./helpcenter.html"><strong>Our Help Center</strong></a>
+            <a href="./angelbaboutme.html"><strong>About The Owner</strong></a>
         </div>
-        <img src="angelbpictures/logoforbusiness.png" alt="Logo for business" id="logoforbusiness"/>
-        <p style="font-family: Arial, Helvetica, sans-serif; text-align: center;">Hello, my name is Angel Blessed and welcome to my website. <br>I have a lot of different styles for different perferences. Here are some of my different styles:</p>
+    </div>
+    <div class="content">
+        <img src="./assests/images/logoforbusiness.png" alt="Logo for business" id="logoforbusiness"/>
+        <p style="font-family: Arial, Helvetica, sans-serif; text-align: center;">Hello, my name is Angel Blessed and welcome to my website.<br>I have a lot of different styles for different perferences. Here are some of my different styles:</p>
         <div id="wigpictures">
-            <img src="angelbpictures/Hairandwigs2.jpg" alt="Two mannequins with different hair styles."/>
-            <img src="angelbpictures/hairandwigs3.jpeg" alt="Two mannequins with different hair styles."/>
-            <img src="angelbpictures/hairandwigs4.jpeg" alt="Two mannequins with different hair styles."/>
-            <img src="angelbpictures/hairandwigs5.jpeg" alt="Two mannequins facing foward with different styles of hair."/>
-            <img src="angelbpictures/hairandwigs6.jpeg" alt="Two faceless mannequins with different styles of hair."/>
-            <img src="angelbpictures/hairandwigs7.jpeg" alt="One mannequins with a hair styled wig."/>
+            <img src="./assests/images/hairandwigs.jpg" alt="Two mannequins with different hair styles."/>
+            <img src="./assests/images/Hairandwigs2.jpg" alt="Two mannequins with different hair styles."/>
+            <img src="./assests/images/hairandwigs3.jpeg" alt="Two mannequins with different hair styles."/>
+            <img src="./assests/images/hairandwigs4.jpeg" alt="Two mannequins facing foward with different styles of hair."/>
+            <img src="./assests/images/hairandwigs5.jpeg" alt="Two faceless mannequins with different styles of hair."/>
+            <img src="./assests/images/hairandwigs6.jpeg" alt="One mannequins with a hair styled wig."/>
+            <!--Add any other pictures that are necessary.-->
         </div>
-        <hr>
-        <div>
-            <h3>About Me:</h3>
-            <a href="./angelbaboutme.html">Contact Me</a>
-        </div>
-        <footer>
-            <p><strong>Copyright © 2024 All Rights Reserved - San Filter, LLC</strong></p>
-            <p>Website designed and maintained by Harrison Freedman</p>
-        </footer>
-    </body>
+    <hr>
+    <div>
+        <h3>About Me:</h3>
+        <a href="./angelbaboutme.html">Contact Me</a>
+        <a href="./angelbaboutme.html">About the Owner</a>
+        <a href="./helpcenter.html">Help Center</a>
+    </div>
+    <footer>
+        <p><strong>Copyright © 2024 All Rights Reserved - San Filer, LLC</strong></p>
+        <p>Website designed and maintained by Harrison Freedman</p>
+    </footer>
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('collapsed');
+        }
+    </script>
+</body>
 </html>
