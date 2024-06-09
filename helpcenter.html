@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Filter | Help Center</title>
+    <meta name="description" content="If you would like to read some interesting information about how the owner started their buiness, this page gives all of the juicy details."/>
+    <style>
+
+        .list-collapse {
+            background-color: #f1f1f1;
+            color: #444;
+            cursor: pointer;
+            padding: 10px;
+            width: 50%;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid #ddd;
+            margin-bottom: 5px;
+        }
+
+        .list-collapse::after {
+            content: '+';
+            font-size: 20px;
+            transition: transform 0.5s ease;
+        }
+
+        .active::after {
+            transform: rotate(45deg);
+        }
+
+        .content {
+            padding: 0 18px;
+            display: none;
+            overflow: hidden;
+            background-color: #f9f9f9;
+            margin-top: 5px;
+            text-align: center;
+        }
+
+        .list-item {
+            text-align: center;
+        }
+    </style>
+    <style>
+        body {
+    background-color: white;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h3 {
+            text-align: center;
+        }
+
+        img {
+            max-width: 500px;
+        }
+    </style>
+</head>
+<body>
+    <img src="./assests/images/logoforbusiness.png" width="200px;"/>
+    <h1>Welcome to the Q & A page.</h1>
+    <h3>Here, you will find answers to some questions that you might be wondering.</h3>
+    
+    
+    <section class="container">
+            <div>
+                <button class="list-collapse">Q1: How do I purchase my items?</button>
+                <div class="content">
+                    <p>To purchase your<strong>items</strong>, or your hair syles, please use our purchse site. This will allow you to effectively purchase that hair style(s) that you want.</p>
+                </div>
+            </div>
+            <div>
+                <button class="list-collapse">Q2: Is this a scam?</button>
+                <div class="content">
+                    <p>No, this website is not and will never be a scam. We sell high quality products, and that is it. You get what you pay for.</p>
+                </div>
+            </div>
+            <div>
+                <button class="list-collapse">Q3: Is there a way to get in contact with someone?</button>
+                <div class="content">
+                    <p>You may get in contact with us through our email. Soon, we expect to add a live-chat support system to this website. We will get in contact with you as soon as possible. But please note: Any form of trolling or spamming will be ignored.</p>
+                </div>
+            </div>
+            <div>
+                <button class="list-collapse">Q4: Where are you guys located?</button>
+                <div class="content">
+                    <p>Our business is located in the United States.</p>
+                </div>
+            </div>
+            <div>
+                <button class="list-collapse">Q5: What payment processor do you guys use?</button>
+                <div class="content">
+                    <p>We use a payment merchant called <strong>Stripe</strong>. They offer amazing services. All of your card payments will be processed by them. But, we soon may offer other ways to pay. Such as: Cash App, PayPal, BitCoin.</p>
+                </div>
+            </div>
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                    var coll = document.getElementsByClassName("list-collapse");
+                    for (var i = 0; i < coll.length; i++) {
+                        coll[i].addEventListener("click", function() {
+                            this.classList.toggle("active");
+                            var content = this.nextElementSibling;
+                            if (content.style.display === "block") {
+                                content.style.display = "none";
+                            } else {
+                                content.style.display = "block";
+                            }
+                        });
+                    }
+                });
+            </script>
+        </div>
+    </section>
+    
+    
+    <footer>
+        <h3>More:</h3>
+        <hr>
+        <a href="./angelbhome.html">Home Page</a>
+        <br>
+        <a href="./angelbshop.html">Shop</a>
+        <br>
+        <a href="./angelbaboutme.html">About the Owner</a>
+        <div id="copyright">
+            <h3><strong>Copyright 2024 © All Rights Reserved - San Filter, LLC</strong></h3>
+            <h5>Website was designed and is maintained by Harrison Freedman</h5>
+        </div>
+    </footer>
+</body>
+</html>
